@@ -42,11 +42,11 @@ jobs:
       with:
         name: BOM
         path: manufacturing/${{ env.PROJECT_NAME }}.csv
-    - name: Upload gerbers
+    - name: Upload manufacturing files
       uses: actions/upload-artifact@v2
       with:
-        name: gerbers
-        path: manufacturing/gerbers
+        name: manufacturing files
+        path: manufacturing
     - name: Upload docs
       uses: actions/upload-artifact@v2
       with:
