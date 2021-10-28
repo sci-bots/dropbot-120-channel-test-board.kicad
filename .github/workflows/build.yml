@@ -35,16 +35,16 @@ jobs:
         board: '${{ env.PROJECT_NAME }}.kicad_pcb'
     - name: Generate BOM
       run: |
+        mkdir -p manufacturing/default/assembly_photos
+        mkdir manufacturing/PCBWay/assembly_photos
         python -m kifield --group -aq -x "${{ env.PROJECT_NAME }}.sch" -i "manufacturing/default/${{ env.PROJECT_NAME }}-BOM.csv"
-        ls -l manufacturing/
+        ls -l
         ls -l manufacturing/default
         ls -l manufacturing/PCBWay
     - name: Copy assembly photos to manufacturing
       run: |
-        mkdir manufacturing/default/assembly_photos
         cp docs/png/Front.png manufacturing/default/assembly_photos/Front.png
         cp docs/png/Back.png manufacturing/default/assembly_photos/Back.png
-        mkdir manufacturing/PCBWay/assembly_photos
         cp -r manufacturing/default/assembly_photos/*.png manufacturing/PCBWay/assembly_photos/
     - name: Upload BOM artifact
       uses: actions/upload-artifact@v2
