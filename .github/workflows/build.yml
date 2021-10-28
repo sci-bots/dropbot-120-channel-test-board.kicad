@@ -76,8 +76,8 @@ jobs:
       env:
           VERSION: ${{ steps.get_version.outputs.VERSION }}
       run: |
-        zip -r ${{ env.PROJECT_NAME }}-manufacturing-files-default-${VERSION}.zip manufacturing/default
-        zip -r ${{ env.PROJECT_NAME }}-manufacturing-files-PCBWay-${VERSION}.zip manufacturing/PCBWay
+        zip -r ${{ env.PROJECT_NAME }}-default-manufacturing-files-${VERSION}.zip manufacturing/default
+        zip -r ${{ env.PROJECT_NAME }}-PCBWay-manufacturing-files-${VERSION}.zip manufacturing/PCBWay
         zip -r ${{ env.PROJECT_NAME }}-docs-${VERSION}.zip docs
         mv manufacturing/default/${{ env.PROJECT_NAME }}-BOM.csv ${{ env.PROJECT_NAME }}-BOM-${VERSION}.csv
         zip -rj ${{ env.PROJECT_NAME }}-gerbers-${VERSION}.zip manufacturing/default
