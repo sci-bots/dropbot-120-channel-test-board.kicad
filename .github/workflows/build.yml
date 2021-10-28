@@ -35,8 +35,8 @@ jobs:
         board: '${{ env.PROJECT_NAME }}.kicad_pcb'
     - name: Generate BOM
       run: |
+        sudo chown -R runner:docker manufacturing
         ls -l
-        ls -l manufacturing
         mkdir -p manufacturing/default/assembly_photos
         mkdir -p manufacturing/PCBWay/assembly_photos
         python -m kifield --group -aq -x "${{ env.PROJECT_NAME }}.sch" -i "manufacturing/default/${{ env.PROJECT_NAME }}-BOM.csv"

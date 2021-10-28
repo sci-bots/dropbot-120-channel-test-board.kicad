@@ -60,7 +60,7 @@ outputs:
   - name: generate_pos
     comment: "Generate position file"
     type: position
-    dir: manufacturing/default/
+    dir: manufacturing/default/position
     options:
       format: 'ASCII' # [ASCII,CSV] Format for the position file.
       separate_files_for_front_and_back: true
