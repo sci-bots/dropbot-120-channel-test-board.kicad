@@ -36,7 +36,7 @@ jobs:
     - name: Generate BOM
       run: |
         mkdir -p manufacturing/default/assembly_photos
-        mkdir manufacturing/PCBWay/assembly_photos
+        mkdir -p manufacturing/PCBWay/assembly_photos
         python -m kifield --group -aq -x "${{ env.PROJECT_NAME }}.sch" -i "manufacturing/default/${{ env.PROJECT_NAME }}-BOM.csv"
         ls -l
         ls -l manufacturing/default
