@@ -75,6 +75,7 @@ outputs:
 
   - name: print_svg
     comment: "Print svg"
+    type: svg
     dir: .
     options:
       output: 'docs/svg/%f-%i%v.%x'
