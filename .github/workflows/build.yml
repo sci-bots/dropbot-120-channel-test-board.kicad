@@ -35,18 +35,25 @@ jobs:
         board: '${{ env.PROJECT_NAME }}.kicad_pcb'
     - name: Generate BOM
       run: |
-        python -m kifield --group -aq -x "${{ env.PROJECT_NAME }}.sch" -i "manufacturing/${{ env.PROJECT_NAME }}.csv"
-        ls -l
+        python -m kifield --group -aq -x "${{ env.PROJECT_NAME }}.sch" -i "manufacturing/default/${{ env.PROJECT_NAME }}-BOM.csv"
+        ls -l manufacturing/
+        ls -l manufacturing/default
+        ls -l manufacturing/PCBWay
     - name: Upload BOM artifact
       uses: actions/upload-artifact@v2
       with:
         name: BOM
-        path: manufacturing/${{ env.PROJECT_NAME }}.csv
-    - name: Upload manufacturing files
+        path: manufacturing/default/${{ env.PROJECT_NAME }}-BOM.csv
+    - name: Upload default manufacturing files
       uses: actions/upload-artifact@v2
       with:
-        name: manufacturing files
-        path: manufacturing
+        name: default manufacturing files
+        path: manufacturing/default
+    - name: Upload PCBWay manufacturing files
+      uses: actions/upload-artifact@v2
+      with:
+        name: PCBWay manufacturing files
+        path: manufacturing/PCBWay
     - name: Upload docs
       uses: actions/upload-artifact@v2
       with:
@@ -61,9 +68,10 @@ jobs:
       env:
           VERSION: ${{ steps.get_version.outputs.VERSION }}
       run: |
-        zip -r ${{ env.PROJECT_NAME }}-manufacturing-files-${VERSION}.zip docs manufacturing
-        mv manufacturing/${{ env.PROJECT_NAME }}-BOM.csv ${{ env.PROJECT_NAME }}-BOM-${VERSION}.csv
-        zip -rj ${{ env.PROJECT_NAME }}-gerbers-${VERSION}.zip manufacturing/gerbers
+        zip -r ${{ env.PROJECT_NAME }}-manufacturing-files-default-${VERSION}.zip docs manufacturing/default
+        zip -r ${{ env.PROJECT_NAME }}-manufacturing-files-PCBWay-${VERSION}.zip docs manufacturing/PCBWay
+        mv manufacturing/default/${{ env.PROJECT_NAME }}-BOM.csv ${{ env.PROJECT_NAME }}-BOM-${VERSION}.csv
+        zip -rj ${{ env.PROJECT_NAME }}-gerbers-${VERSION}.zip manufacturing/default
     - name: Create release
       if: startsWith(github.ref, 'refs/tags/v')
       uses: ncipollo/release-action@v1
