@@ -35,7 +35,6 @@ jobs:
         board: '${{ env.PROJECT_NAME }}.kicad_pcb'
     - name: Generate BOM
       run: |
-        sudo chown -R runner:docker manufacturing
         ls -l
         ls -l manufacturing
         mkdir -p manufacturing/default/assembly_photos
