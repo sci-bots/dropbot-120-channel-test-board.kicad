@@ -39,6 +39,13 @@ jobs:
         ls -l manufacturing/
         ls -l manufacturing/default
         ls -l manufacturing/PCBWay
+    - name: Copy assembly photos to manufacturing
+      run: |
+        mkdir manufacturing/default/assembly_photos
+        cp docs/png/Front.png manufacturing/default/assembly_photos/Front.png
+        cp docs/png/Back.png manufacturing/default/assembly_photos/Back.png
+        mkdir manufacturing/PCBWay/assembly_photos
+        cp -r manufacturing/default/assembly_photos/*.png manufacturing/PCBWay/assembly_photos/
     - name: Upload BOM artifact
       uses: actions/upload-artifact@v2
       with:
