@@ -6,8 +6,8 @@ For more information, please visit https://sci-bots.com
 
 [![Sci-Bots logo](docs/png/sci-bots-logo.png)][sci-bots]
 
-[![front](docs/png/Front.png)](docs/png/Front.png)
-[![back](docs/png/Back.png)](docs/png/Back.png)
+[![front](docs/png/front.png)](docs/png/front.png)
+[![back](docs/png/back.png)](docs/png/back.png)
 
 This design is open-source hardware released under a [Creative Commons Attribution-ShareAlike licence][cc-by-sa].
 
