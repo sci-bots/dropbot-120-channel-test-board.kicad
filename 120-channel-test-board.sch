@@ -3758,6 +3758,6 @@ Wire Wire Line
 Connection ~ 5500 1500
 Wire Wire Line
 	5500 1500 5500 1600
-Text GLabel 2300 1300 0    60   Input ~ 0
+Text Label 2300 1300 2    60   ~ 0
 CUR_SENSE
 $EndSCHEMATC
