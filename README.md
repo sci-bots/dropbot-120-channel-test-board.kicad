@@ -1,3 +1,6 @@
+[![tests](https://github.com/sci-bots/dropbot-120-channel-test-board.kicad/actions/workflows/build.yml/badge.svg)](https://github.com/sci-bots/dropbot-120-channel-test-board.kicad/actions/workflows/build.yml)
+[![kitspace](https://img.shields.io/badge/kitspace-ok-success)](https://kitspace.org/boards/github.com/sci-bots/dropbot-120-channel-test-board.kicad/)
+
 # DropBot v3 test board
 
 The [DropBot][dropbot] test board is a printed circuit board with a 10 pF capacitor connected to each of the 120 actuation channels. Each capacitor simulates the equivalent capacitance between an electrode on a DMF chip covered by a liquid droplet and the top plate counter electrode.
