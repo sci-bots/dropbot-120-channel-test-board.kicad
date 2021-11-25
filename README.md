@@ -1,5 +1,5 @@
 [![tests](https://github.com/sci-bots/dropbot-120-channel-test-board.kicad/actions/workflows/build.yml/badge.svg)](https://github.com/sci-bots/dropbot-120-channel-test-board.kicad/actions/workflows/build.yml)
-[![kitspace](https://img.shields.io/badge/kitspace-ok-success)](https://kitspace.org/boards/github.com/sci-bots/dropbot-120-channel-test-board.kicad/)
+[![kitspace](https://img.shields.io/website?down_color=red&down_message=no&label=kitspace&up_color=sucess&up_message=ok&url=https%3A%2F%2Fkitspace.org%2Fboards%2Fgithub.com%2Fsci-bots%2Fdropbot-120-channel-test-board.kicad)](https://kitspace.org/boards/github.com/sci-bots/dropbot-120-channel-test-board.kicad/)
 
 # DropBot v3 test board
 
@@ -13,10 +13,6 @@ For more information, please visit https://sci-bots.com
 [![back](docs/png/back.png)](docs/png/back.png)
 
 This design is open-source hardware released under a [Creative Commons Attribution-ShareAlike licence][cc-by-sa].
-
-Order your own boards at <a href="https://kitspace.org/boards/github.com/sci-bots/dropbot-120-channel-test-board.kicad">
-  <img src="https://github.com/kitspace/kitspace/blob/master/image_src/logo.svg" alt="order at kitspace" width="120"/>
-</a>.
 
 [![Creative Commons Attribution-ShareAlike 3.0 Unported License](https://i.creativecommons.org/l/by-sa/3.0/88x31.png)][cc-by-sa]
 
