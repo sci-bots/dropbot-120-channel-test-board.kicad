@@ -1,6 +1,6 @@
 summary: Test board for the DropBot v3 digital microfluidics platform
 
-site: https://github.com/sci-bots/dropbot-v3
+site: https://github.com/sci-bots/dropbot-120-channel-test-board.kicad
 
 color: black
    # The solder resist color of the preview rendering. If left undefined "green" is used. Can be one of:
